@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html, body {
+    @apply max-w-full overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Inter";
+  }
+
+  a {
+      @apply hover:bg-orange-500/25 p-0.5;
+  }
+}
+
+@layer components {
+  .nav-active {
+    @apply underline underline-offset-4 decoration-orange-500
+  }
+}

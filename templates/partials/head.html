@@ -1,19 +1,36 @@
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Title -->
   {% set current_path = current_path | default(value="/") %}
+
+  <!-- On the homepage use the config.title -->
   {% if current_path == "/" %}
   <title>
-    {% config.title | default(value="JRY") %}
+    {{ config.title | default(value="JRY") }}
   </title>
+  <!-- On every other page use the page title -->
   {% else %}
   <title>
-    {% page.title | config.title | default(value="JRY") %}
+    {% if page.title %}
+    {{ page.title | default(value="JRY")}}
+    {% elif section.title %}
+    {{ section.title }}
+    {% else %}
+    {{ config.title }}
+    {% endif %}
   </title>
   {% endif %}
 
   <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/tailwind.css" />
+  <link rel="stylesheet" href="/inter-web/inter.css" />
 
 </head>

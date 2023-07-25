@@ -5,14 +5,14 @@
 # The URL the site will be built for
 base_url = "https://jry.io"
 
-title = "JRY"
-description = "Writings and Goings of JRY"
+title = "Jacob Young"
+description = "Software Engineer & Long Distance Traveler"
 
 # The default language; used in feeds.
 default_language = "en"
 
 # Whether to automatically compile all Sass files in the sass directory
-compile_sass = false
+compile_sass = true
 
 # Whether to build a search index to be used later on by a JavaScript library
 # When set to "true", a search index is built from the pages and section
@@ -95,3 +95,6 @@ include_content = true
 # ========================================
 [extra]
 # Put all your custom variables here
+
+[extra.navbar]
+enabled = true

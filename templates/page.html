@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="prose">
+  {{ page.content | safe }}
+  {% include "partials/footer.html" %}
+
+</div>
+{% endblock content %}

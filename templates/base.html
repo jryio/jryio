@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{% include partials/head.html %}
+{% include "partials/head.html" %}
 
-<body>
-  {% block body %}
-  {% endblock body %}
+<body class="bg-orange-50/75">
+  <div class="mx-4 md:max-w-4xl lg:max-w-4xl lg:m-auto">
 
-  {% block footer %}
-  {% endblock footer %}
+    <!-- ====== -->
+    <!-- NAVBAR -->
+    <!-- ====== -->
 
+    {% include "partials/navbar.html" %}
+
+    <!-- ======= -->
+    <!-- CONTENT -->
+    <!-- ======= -->
+
+    {% block content %}
+    {% endblock content %}
+
+
+  </div>
 </body>
 
 </html>

@@ -1,0 +1,32 @@
+{% if config.extra.navbar.enabled %}
+{% set paths = [] %}
+{% set path = "" %}
+{% if section is defined %}
+{% set_global paths = section.components %}
+{% set_global path = section.path %}
+{% elif page is defined %}
+{% set_global paths = page.components %}
+{% set_global path = page.path %}
+{% endif %}
+<nav class="flex flex-row justify-between py-8">
+  <div class="">
+    {% if path != "/" %}
+    {% set home_str = [] %}
+    {% for p in paths %}
+    {% set_global home_str = home_str | concat(with=[".."]) %}
+    {% endfor %}
+    <a href="/">
+      cd {{ home_str | join(sep="/") }}
+    </a>
+    {% endif %}
+  </div>
+  <div class="flex space-x-4">
+    <a href="/writing" {% if path is containing("/writing") %}class="nav-active" {% endif %}>
+      Writing
+    </a>
+    <a href="https://jakeby.land">
+      Trips
+    </a>
+  </div>
+</nav>
+{% endif %}
