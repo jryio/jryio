@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 {% include "partials/head.html" %}
 
-<body class="bg-orange-50/75">
+<body class="bg-orange-50/75 dark:bg-dark">
   <div class="mx-4 md:max-w-4xl lg:max-w-4xl lg:ml-auto lg:mr-auto">
     <!-- ====== -->
     <!-- NAVBAR -->
@@ -15,8 +15,10 @@
       <!-- CONTENT -->
       <!-- ======= -->
 
-      {% block content %}
-      {% endblock content %}
+      <div class="prose prose-neutral dark:prose-invert">
+        {% block content %}
+        {% endblock content %}
+      </div>
     </main>
 
     <!-- ======= -->

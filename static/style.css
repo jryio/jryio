@@ -16,6 +16,10 @@
   a {
       @apply hover:bg-orange-500/25 p-0.5;
   }
+
+  .prose a {
+      text-decoration-color: #525252;
+  }
 }
 
 @layer components {

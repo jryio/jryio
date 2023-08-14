@@ -1,10 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="prose">
-  <h1>
-    {{ page.title | safe | title }}
-  </h1>
-  {{ page.content | safe }}
-</div>
+<h1>
+  {{ page.title | safe | title }}
+</h1>
+{{ page.content | safe }}
 {% endblock content %}
