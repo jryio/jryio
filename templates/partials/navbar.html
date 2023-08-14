@@ -21,11 +21,9 @@
     {% endif %}
   </div>
   <div class="flex space-x-4">
-    <a href="/writing" {% if path is containing("/writing") %}class="nav-active" {% endif %}>
+    <a href="/writing" {% if path is containing("/writing") %} class="nav-link-active" {% else %} class="nav-link" {%
+      endif %}>
       Writing
-    </a>
-    <a href="https://jakeby.land">
-      Trips
     </a>
   </div>
 </nav>

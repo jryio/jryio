@@ -3,20 +3,17 @@
 {% block content %}
 <div class="prose max-w-full">
   <h1>
-    {{ section.title | safe }}
+    {{ section.title | safe | title }}
   </h1>
 
   {% for page in section.pages %}
   <h3>
     <a href={{page.path}}>
-      {{ page.title }}
+      {{ page.title | safe | title }}
     </a>
   </h3>
   {% endfor %}
 
   {{ section.content | safe }}
-
-  {% include "partials/footer.html" %}
-
 </div>
 {% endblock content %}

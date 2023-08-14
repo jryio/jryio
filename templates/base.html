@@ -4,21 +4,25 @@
 {% include "partials/head.html" %}
 
 <body class="bg-orange-50/75">
-  <div class="mx-4 md:max-w-4xl lg:max-w-4xl lg:m-auto">
-
+  <div class="mx-4 md:max-w-4xl lg:max-w-4xl lg:ml-auto lg:mr-auto">
     <!-- ====== -->
     <!-- NAVBAR -->
     <!-- ====== -->
-
     {% include "partials/navbar.html" %}
 
-    <!-- ======= -->
-    <!-- CONTENT -->
-    <!-- ======= -->
+    <main class="flex flex-col min-h-full">
+      <!-- ======= -->
+      <!-- CONTENT -->
+      <!-- ======= -->
 
-    {% block content %}
-    {% endblock content %}
+      {% block content %}
+      {% endblock content %}
+    </main>
 
+    <!-- ======= -->
+    <!-- Footer -->
+    <!-- ======= -->
+    {% include "partials/footer.html" %}
 
   </div>
 </body>

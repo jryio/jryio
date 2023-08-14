@@ -2,8 +2,9 @@
 
 {% block content %}
 <div class="prose">
+  <h1>
+    {{ page.title | safe | title }}
+  </h1>
   {{ page.content | safe }}
-  {% include "partials/footer.html" %}
-
 </div>
 {% endblock content %}

@@ -8,6 +8,7 @@
     @apply max-w-full overflow-x-hidden;
   }
 
+
   h1, h2, h3, h4, h5, h6 {
     font-family: "Inter";
   }
@@ -18,7 +19,11 @@
 }
 
 @layer components {
-  .nav-active {
+  .nav-link-active {
     @apply underline underline-offset-4 decoration-orange-500
   }
+   .nav-link {
+    @apply underline underline-offset-4
+  }
+
 }
