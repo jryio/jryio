@@ -1,4 +1,5 @@
 module.exports = {
+  // Needs to be set manually on `html` element
   darkMode: 'class',
   content: ['./templates/**/*.{html,js}', './static/*.css'],
   plugins: [
