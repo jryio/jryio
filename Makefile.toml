@@ -7,7 +7,7 @@ args = [
   "-i",
   "static/style.css",
   "-o",
-  "public/tailwind.css",
+  "static/tailwind.css",
   "-w"
 
 ]
