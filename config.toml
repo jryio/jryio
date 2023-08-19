@@ -65,7 +65,13 @@ external_links_no_referrer = true
 # For example, `...` into `…`, `"quote"` into `“curly”` etc
 smart_punctuation = false
 
-# [link_checker]
+[link_checker]
+# Treat internal link problems as either "error" or "warn", default is "error"
+internal_level = "error"
+
+# Treat external link problems as either "error" or "warn", default is "error"
+external_level = "error"
+
 
 # ========================================
 # Slugify
