@@ -5,4 +5,17 @@
   {{ page.title | safe | title }}
 </h1>
 {{ page.content | safe }}
+
+{% if page.backlinks %}
+  <hr/>
+  <h5>Backlinks</h5>
+  <ul>
+  {% for backlink in page.backlinks %}
+    <li>
+      <a href="{{ backlink.permalink}}">{{backlink.title}}</a>
+    </li>
+  {% endfor %}
+  </ul>
+{% endif %}
+
 {% endblock content %}
