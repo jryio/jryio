@@ -5,6 +5,16 @@
   {{ section.title | safe | title }}
 </h1>
 
+{% for sec_path in section.subsections %}
+
+  {% set section = get_section(path=sec_path) %}
+  <h3>
+    <a href={{section.path}}>
+      📔 {{ section.title | safe | title }}
+    </a>
+  </h3>
+{% endfor %}
+
 {% for page in section.pages %}
 <h3>
   <a href={{page.path}}>
