@@ -1,0 +1,13 @@
+{% macro page_date(published, updated, note_type="") %}
+<div class="page-date">
+  {% if note_type %}🌱{% endif %}
+  <time datetime="{{published}}">
+    {{ published | date(format="%b %e, %Y") }}
+  </time>
+  ↠
+  {% if note_type %}{{note_type}}{% endif %}
+  <time datetime="{{updated}}">
+    {{ updated | date(format="%b %e, %Y") }}
+  </time>
+</div>
+{% endmacro page_date %}

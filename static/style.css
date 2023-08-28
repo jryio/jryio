@@ -11,23 +11,80 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: "Inter";
+    position: relative;
   }
 
   a {
       @apply hover:bg-orange-500/25 p-0.5;
   }
 
+  /*
+ * This inserts an icon before external links
+ */
+  p a[href^="https://"]::before {
+    content: '↗ ';
+
+  }
+  p a[href*="garden"]::before {
+    content: '';
+  }
+  p a[href*="garden"]::after {
+    content: '';
+  }
+
+
+  /*
+  * Fix a strange styling for li > input[type="checkbox"] due to how zola uses
+  * pulldown-cmark
+  */
+  .prose li input[type="checkbox"] {
+    margin-top: 0;
+  }
+
+  /*
+  * Annoying more bad styling with Github style todos. This time, if the
+  * description of a TODO item is wrapped in a paragraph, it will be
+  * `display: block` which pushes it onto its own line.
+  */
+  .prose > ul > li > p {
+    display: inline;
+  }
+
+
   .prose a {
       text-decoration-color: #525252;
   }
+
+  /*
+  * Sometimes there will be <img> tags whose src is a PNG representation of an
+  * iPad hand drawing. In these cases, the image will be unreadable on dark mode
+  * because the strokes were made in black.
+  *
+  * We can detect <img> tags which are binary previews by looking att the HTML
+  * `src` attribute to see if it contains "_bin_preview.png".
+  *
+  * The CSS attribute selector syntax for partial includes is `{attr}~="{value}"`
+  */
+  html.dark .prose  img[src*="_bin_preview.png"] {
+      filter: invert(0.5) brightness(1.75) contrast(1.5) !important;
+  }
+
 }
 
 @layer components {
+  a.zola-anchor::before {
+    content: '#';
+    vertical-align: baseline;
+  }
   .nav-link-active {
     @apply underline underline-offset-4 decoration-orange-500
   }
    .nav-link {
     @apply underline underline-offset-4
+  }
+  .page-date {
+    @apply font-bold mb-8;
+    color: var(--tw-prose-captions);
   }
 
 }

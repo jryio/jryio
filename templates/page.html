@@ -1,9 +1,14 @@
+{% import "macros/page_date.html" as macros %}
 {% extends "base.html" %}
 
 {% block content %}
 <h1>
   {{ page.title | safe | title }}
 </h1>
+
+{% set note_type = page.extra | get(key="note_type", default="") %}
+{{ macros::page_date(published=page.date, updated=page.updated, note_type=note_type) }}
+
 {{ page.content | safe }}
 
 {% if page.backlinks %}

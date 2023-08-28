@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: /garden
 Allow: /
 Sitemap: {{ get_url(path="sitemap.xml") }}

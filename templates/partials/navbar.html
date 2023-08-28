@@ -25,6 +25,10 @@
       endif %}>
       Writing
     </a>
+    <a href="/garden" {% if path is containing("/garden") %} class="nav-link-active" {% else %} class="nav-link" {%
+      endif %}>
+      Garden
+    </a>
   </div>
 </nav>
 {% endif %}

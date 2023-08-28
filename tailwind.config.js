@@ -12,6 +12,7 @@ module.exports = {
         peach: '#fffffd',
         dark: '#101011',
       },
+      // https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js
       typography: {
         DEFAULT: {
           css: {

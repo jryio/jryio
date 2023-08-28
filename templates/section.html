@@ -5,15 +5,22 @@
   {{ section.title | safe | title }}
 </h1>
 
+{% block description %}
+{% endblock description %}
+
 {% for sec_path in section.subsections %}
 
   {% set section = get_section(path=sec_path) %}
   <h3>
     <a href={{section.path}}>
-      📔 {{ section.title | safe | title }}
+      {{ section.title | safe | title }}
     </a>
   </h3>
 {% endfor %}
+
+{% if section.subsections | length > 0 and section.pages | length > 0 %}
+<br/>
+{% endif %}
 
 {% for page in section.pages %}
 <h3>
