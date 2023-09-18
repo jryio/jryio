@@ -21,7 +21,7 @@
   /*
  * This inserts an icon before external links
  */
-  p a[href^="https://"]::before {
+  p a[href^="https://"]::before :not(.rc-scout__link) {
     content: '↗ ';
 
   }
@@ -30,6 +30,10 @@
   }
   p a[href*="garden"]::after {
     content: '';
+  }
+  p a.rc-scout__link {
+    text-decoration-color: #525252;
+    color: var(--tw-prose-links) !important;
   }
 
 

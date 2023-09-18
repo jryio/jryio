@@ -6,7 +6,10 @@ title = "Jacob Young"
 
  {{ avatar_home() }}
 
-I am a Software Engineer based in NYC and remotely on _The Internet_.
+
+I am Software Engineer typically based in NYC, currently in Denver, CO, and
+presently attending [The Recurse Center](https://recurse.com) (RC) for a 12 week batch.
+
 
 My focus is on building powerful user-first software. I am passionate about privacy,
 cryptography, user interface design, and art history.
