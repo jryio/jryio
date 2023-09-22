@@ -30,6 +30,10 @@ ignored_content = []
 # https://www.getzola.org/documentation/templates/taxonomies/
 taxonomies = []
 
+# RSS Feed
+generate_feed = false
+feed_file = "atom.xml"
+
 
 # ========================================
 # Markdown

@@ -9,6 +9,8 @@ extra:
 
 > Rust is a systems programming language which provides memory safety, static types, and concurrency
 
+[Learning Async Rust With Entirely Too Many Web Servers](https://ibraheem.ca/posts/too-many-web-servers/)
+
 [GitHub - alexpusch/rust-magic-function-params: Example for Axum style magic function parameter passing](https://github.com/alexpusch/rust-magic-function-params)
 
 [Introductions - Dependency Injection like Bevy Engine from Scratch](https://promethia-27.github.io/dependency_injection_like_bevy_from_scratch/introductions.html)

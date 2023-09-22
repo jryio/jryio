@@ -1,5 +1,5 @@
 +++
-title = "keep a low profile"
+title = "Keep a Low Profile"
 date = 2023-07-14
 updated = 2023-08-14
 +++
