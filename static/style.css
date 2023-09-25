@@ -21,7 +21,7 @@
   /*
  * This inserts an icon before external links
  */
-  p a[href^="https://"]::before :not(.rc-scout__link) {
+  p a:not(.rc-scout__link)[href^="https://"]::before  {
     content: '↗ ';
 
   }
