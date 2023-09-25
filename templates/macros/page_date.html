@@ -4,10 +4,12 @@
   <time datetime="{{published}}">
     {{ published | date(format="%b %e, %Y") }}
   </time>
+  {% if updated %}
   ↠
   {% if note_type %}{{note_type}}{% endif %}
   <time datetime="{{updated}}">
     {{ updated | date(format="%b %e, %Y") }}
   </time>
+  {% endif %}
 </div>
 {% endmacro page_date %}

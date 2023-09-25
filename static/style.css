@@ -32,10 +32,10 @@
     content: '';
   }
   p a.rc-scout__link {
-    text-decoration-color: #525252;
+    /* text-decoration-color: #525252; */
     color: var(--tw-prose-links) !important;
+    @apply decoration-orange-500/50 !important;
   }
-
 
   /*
   * Fix a strange styling for li > input[type="checkbox"] due to how zola uses
@@ -56,7 +56,7 @@
 
 
   .prose a {
-      text-decoration-color: #525252;
+      @apply decoration-orange-500/50;
   }
 
   /*
