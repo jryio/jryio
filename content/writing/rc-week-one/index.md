@@ -1,6 +1,7 @@
 +++
 title = "Recurse 1 - Dealing with Burnout, Thru-Hiking, and Back Again"
 date = 2023-09-22
+updated = 2023-09-25
 +++
 
 This is a summary of my first week at [The Recurse Center](https://recurse.com),
@@ -91,6 +92,9 @@ each other, whichever completed first would win. So I went to RC
 
 ### First Day of School
 
+Fellow batchmate Stacey Tay put it well in [his week one
+roundup](https://stace.dev/rc-01-first-week-at-recurse), starting RC is a lot
+like returning to school.
 
 There is a certain kind of nervous energy after returning to classes after a
 long summer of play. The Recurse Center is no different. The first week was ripe
