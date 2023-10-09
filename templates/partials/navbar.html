@@ -9,7 +9,7 @@
 {% set_global path = page.path %}
 {% endif %}
 <nav class="prose dark:prose-invert flex flex-row justify-between py-8">
-  <div class="">
+  <div class="home">
     {% if path != "/" %}
     {% set home_str = [] %}
     {% for p in paths %}
@@ -20,7 +20,7 @@
     </a>
     {% endif %}
   </div>
-  <div class="flex space-x-4">
+  <div id="navlinks" class="flex space-x-4">
     <a href="/writing" {% if path is containing("/writing") %} class="nav-link-active" {% else %} class="nav-link" {%
       endif %}>
       Writing

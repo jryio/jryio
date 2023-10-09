@@ -12,7 +12,7 @@
 
   {% set section = get_section(path=sec_path) %}
   <h3>
-    <a href={{section.path}}>
+    <a href={{section.path}} class="page-link">
       {{ section.title | safe | title }}
     </a>
   </h3>
@@ -24,7 +24,7 @@
 
 {% for page in section.pages %}
 <h3>
-  <a href={{page.path}}>
+  <a href={{page.path}} class="page-link">
     {{ page.title | safe | title }}
   </a>
 </h3>

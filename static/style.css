@@ -14,21 +14,37 @@
     position: relative;
   }
 
-  a {
+  a:not(.image-link){
       @apply hover:bg-orange-500/25 p-0.5;
   }
 
   /*
  * This inserts an icon before external links
  */
-  p a:not(.rc-scout__link)[href^="https://"]::before  {
-    content: '↗ ';
-
+  div.prose article  a[href*="writing"]::before {
+    content: '@' !important;
   }
-  p a[href*="garden"]::before {
+
+  .prose a:not(.rc-scout__link, .image-link)[href^="https://"]::before  {
+    content: '↗ ';
+  }
+  .prose a:not(.rc-scout__link, .image-link)[href^="http://"]::before  {
+    content: '↗ ';
+  }
+
+  /* Don't add symbols to navbar */
+  .prose > #navlinks > a::before {
     content: '';
   }
-  p a[href*="garden"]::after {
+  /* Don't add symbols to section links */
+  .prose a.page-link::before {
+    content: '';
+  }
+
+  .prose a:not(.page-link)[href*="garden"]::before {
+    content: '@';
+  }
+  .prose a[href*="garden"]:not(class=".page-link")::after {
     content: '';
   }
   p a.rc-scout__link {
@@ -53,7 +69,6 @@
   .prose > ul > li > p {
     display: inline;
   }
-
 
   .prose a {
       @apply decoration-orange-500/50;
