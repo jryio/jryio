@@ -172,22 +172,22 @@ have plenty of tools to offer, I have even more to learn.
 Also, there is great fun geeking out about tools where every tool is on equal
 footing. No vim v.s. emacs flame wars, just plain old fashioned: "what tools do
 you use for this job". Connecting to the root of [Homo Sapien](https://australian.museum/learn/science/human-evolution/homo-sapiens-modern-humans/),
-wisdom, tool making, and teaching can be great fun even if it's about
+wisdom, tool making, and teaching can be great fun even if it's  about
 computer tools.
 
 
 ### Rust Books Crew
 
 
-It should not be surprising to find my fellow Recursers programing
+I should not have been surprised to find many of my fellow Recursers programing
 in Rust during their batch. For the last eight years in a row, Rust has
 ranked [most admired programming language](https://survey.stackoverflow.co/2023/#section-admired-and-desired-programming-scripting-and-markup-languages)
 on the Stack Overflow Developer Survey.
 
 
-Skills levels in Rust skew towards beginner at Recurse and had I joined only a
-few months ago I would have been a beginner as well. Several other great Rust
-programmers on Zulip who incorporate lively debugging and
+Skills levels in Rust skew towars beginner at Recruse and had I joined only a
+few months ago I would have been a beginner as well. Thankfully there are
+several great Rust programmers on Zulip who incorporate lively debugging and
 discussion into the group.
 
 
@@ -202,8 +202,7 @@ been useful in a group setting instead of individual reading.
 
 
 Aside from tokio, I have not dealt directly with spawning threads, channels, or
-working with atomics yet, but I would like to dive deeper into these primitives as
-I work on more complex Rust programs.
+workign with atomics yet. All are things I am interested in diving deeper into.
 
 
 ### Cryptopals
@@ -218,7 +217,7 @@ Specifically [Cryptopals Set 1 - Challenge
 cipher -  engaged more of my byte-level Rust
 than I expected. Without lower level exercises like these, it can be easy to
 throw `clone()` around in Rust without appreciating how to take the "harder"
-reference and lifetime approach.
+refernce and lifetime approach.
 
 
 Implementing a frequency analysis on cipher texts is a great way to work
@@ -231,27 +230,28 @@ my implementation of scoring text based on expected English character frequencie
 
 Some issues I encountered while implementing:
 
-1. Which characters in the ASCII table do I consider valid?
-2. Which non-alphanumeric characters should I count? For example `'`, `\n`, `\t`, `"`, `.`, `!`, `?`, `,`.
-3. How should invalid characters should I scored?
-4. Should I score the frequency of a character or character counts themselves?
+1. Which characters in the ASCII table should be considered valid?
+2. Which non-alphanumeric characters should be counted? For example `'`, `\n`, `\t`, `"`, `.`, `!`, `?`, `,`.
+3. How should invalid characters be scored?
+4. Should the frequency of a character be scored or character counts themselves?
 
 
 I landed on a set of tradeoff which have worked thus far in the challenges.
 
-1. ASCII control characters are invalid when analyzing texts. No regular English
-   phrase contain these.
+1. ASCII control characters should not be considered when analyzing texts to
+   determine if they are similar to English texts.
 
-2. Whitespace are valid because they distinguish random letters from
-   formatted sentences.
+2. It is important to count whitespace because it is so clearly a marker of a
+   formatted sentence.
 
-3. Punctuation are valid if aggregated. Attempting to score per-character
-   leads to chi-sqaured scores which deviate from expected results.
+3. Punctuation should be counted as well, but in aggregate rather than
+   per-character. Attempting to score per-character leads to chi-sqaured scores
+   which deviate from expected results.
 
-4. Comparing expected character counts against actual character counts is better
+4. Comparing expeted character counts against actual character counts is better
    than comparing frequency values because the smaller text size of an actual
    cipher text will almost certainly be non-representative of the entire English
-   language character frequency.
+   langauge character frequency.
 
 5. Higher chi-squared values are not better, in fact pay attention to what the
    formula says: `(expected - actual)^2` tells you that actual character count
@@ -321,8 +321,8 @@ pub fn frequency_score(buffer: &[u8]) -> u32 {
 ```
 
 
-Notes on Rust in the code samples above - things I enjoyed using or
-learned while writing my implementation:
+There are a few Rust gems in the code sample above I would like to point out
+becaue they made me happy when discovering them:
 
 [`HashMap::entry()`](http://doc.rust-lang.org/1.72.1/std/collections/struct.HashMap.html#method.entry) is a great API for getting and inserting values in a single
 method call. It solves the issue of calling `HashMap::get()`, checking if the
@@ -336,10 +336,10 @@ than the type of the iterator.
 will use the first element
 of the iterator as the accumulator, so for example if you have an iterator of
 `u32`, `reduce` takes the first `u32` as the initial value and lets you do
-whatever operations you wish until it collapses every `u32` value into a
-single one. By contrast `fold` lets you take an iterator or anything and fold
+whatever operations you wish until it collapses all of the `u32` values into a
+single one. By contrast `fold` lets you take an interator or anything and fold
 it into the type you specify as the first argument. It is nice to have these two
-separated.
+seperated.
 
 
 [`char::is_alphanumeric()`](http://doc.rust-lang.org/1.72.1/std/primitive.char.html#method.is_alphanumeric)
@@ -357,13 +357,13 @@ Filesystem](http://ori.scs.stanford.edu/),
 [Age](https://age-encryption.org/) (not a file system).
 
 
-* Get a FUSE mounted to my Macbook 
+* Get a FUSE mounted to my macbook
 * Make a VirtualFS abstraction over the directly file system (what design
   choices to make?)
-* Design a multiparty key exchange for a shared folder. Perhaps a reader keyring
+* Design a multiparty key exchange for a shared foler. Perhaps a reader keyring
   and writer keyring.
 * Decide to what degree I care about authenticated and trusted key exchange (might
-  have to overlook this for the initial version).
+  have to overlook this for the intial version).
 * Determine the behavior for chunking and encrypted file data.
-* How much, and what, metadata is to the sync server?
+* How much, and what, metadata should be exposed to the sync server?
 

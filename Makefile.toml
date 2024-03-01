@@ -1,4 +1,4 @@
-[tasks.watch-zola]
+[tasks.watch-tailwind]
 command = "./tailwindcss"
 args = [
   "-m",
@@ -8,11 +8,11 @@ args = [
   "static/style.css",
   "-o",
   "static/tailwind.css",
-  "-w"
+  "-w",
 
 ]
 
-[tasks.watch-tailwind]
+[tasks.watch-zola]
 command = "zola"
 args = ["serve"]
 
