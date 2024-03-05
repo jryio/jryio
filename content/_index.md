@@ -2,31 +2,38 @@
 title = "Jacob Young"
 +++
 
-# Hi, I'm Jacob
+<h3 class="text-stone-400">Hi, I'm Jacob 👋</h3>
 
  {{ avatar_home() }}
 
+## Full Stack Software Engineer
 
-I am Software Engineer typically based in NYC, currently in Denver, CO, and
-presently attending [The Recurse Center](https://recurse.com) (RC) for a 12 week batch.
+5+ years of experience with both venture backed startups and public tech
+companies. Engineering behind Zoom's [End-to-End Encrypted video calls](https://blog.zoom.us/zoom-rolling-out-end-to-end-encryption-offering/).
+Product engineering at Keybase for [delightful cryptography](https://keybase.io/blog/crypto) on desktop and mobile.
 
 
-My focus is on building powerful user-first software. I am passionate about privacy,
-cryptography, user interface design, and art history.
+My focus in on engineering designing excellent user interfaces as well as implementing 
+technical systems including cryptographic protocols and key exchange. 
+I enjoy enabled powerful software through simple and elegant design.
 
-Previously I worked on bringing 
-[End to End Encryption to Zoom video calls](https://blog.zoom.us/zoom-rolling-out-end-to-end-encryption-offering/).
 
-Before that I worked with the amazing [Keybase](https://keybase.io) team 
-([acquired by Zoom](https://keybase.io/blog/keybase-joins-zoom)), where we
-created a fully encrypted [file system](https://book.keybase.io/files),
-[chat](https://book.keybase.io/chat), [key infrastructure](https://book.keybase.io/account), 
-and [more](https://keybase.io/blog/crypto)!
+I am an avid endurance athlete, cyclist, mountaineer, backpacker, 
+and rock climber. Recently, I hiked [600 miles of The Pacific Crest
+Trail](https://jakeby.land) and 
+bikepacked [1200 miles the Pacific Coast Highway](https://jryio.travelmap.net/pcb-2022) of the United States.
 
-My work consists of designing excellent user interfaces as well as implementing 
-technical systems including cryptographic protocols and key exchange. Exposing
-complexity though simple design is my joy in Software Engineering.
 
-I am an avid endurance athlete, cyclist, backpacker, and rock climber. Recently, I hiked [600 miles of The Pacific Crest
-Trail](https://jakeby.land) and [bikepacked the pacific coast](https://jryio.travelmap.net/pcb-2022) of the United States.
+### Hire Me
+
+
+I've built systems in Golang, Rust, React, TypeScript/JavaScript, NodeJS,
+HTML/CSS, Tailwind, and more! I can tackle systems engineering challenges from
+implementing high performance data structures to squeezing miliseconds out of
+web rendering.
+
+
+Have a look at my [LinkedIn](https://linkedin.com/in/jryio) and <a href="mailto:work@jry.io?subject=Contract/Freelance Opportunity">write me an email</a>
+detailing your project's challenges. Let's work together!
+
 

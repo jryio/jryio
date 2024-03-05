@@ -1,7 +1,11 @@
 module.exports = {
   // Needs to be set manually on `html` element
   darkMode: 'class',
-  content: ['./templates/**/*.{html,js}', './static/*.css'],
+  content: [
+    './content/*.md',
+    './templates/**/*.{html,js}',
+    './static/*.css',
+  ],
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography')

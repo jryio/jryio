@@ -9,7 +9,6 @@ args = [
   "-o",
   "static/tailwind.css",
   "-w",
-
 ]
 
 [tasks.watch-zola]
